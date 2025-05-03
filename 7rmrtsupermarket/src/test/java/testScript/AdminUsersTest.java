@@ -6,10 +6,9 @@ import org.testng.annotations.Test;
 import pages.AdminUsersPage;
 import pages.LoginPage;
 import utility.ExcelUtility;
-//import utility.FakerUtility;
 
 public class AdminUsersTest extends Base{
-	@Test
+	@Test(groups="regression")
 	public void verifyThatUserIsAbleToSaveUserDeatils() throws Exception
 	{
 		

@@ -8,7 +8,7 @@ import pages.ManageFooterTextPage;
 import utility.ExcelUtility;
 
 public class ManageFooterTextTest extends Base{
-	@Test
+	@Test(groups="regression")
 	
 	public void verifyIfUserAbleToUpdateFooterDetails() throws Exception
 	{

@@ -9,10 +9,11 @@ import utility.ExcelUtility;
 
 
 public class LoginTest extends Base {
-	@Test
+	@Test(groups= {"regression"},retryAnalyzer=retry.Retry.class,description="")
 	public void verifyTheUserIsAbleToLoginUsingValidCredentials() throws Exception 
 	{
-		
+		//String username="admin";
+		//String password="abcd";
 	String username = ExcelUtility.readStringData(1, 0, "loginpage");
 	String password = ExcelUtility.readStringData(1, 1, "loginpage");
 		LoginPage loginpage = new LoginPage(driver);//parameterized construction need to create constructor in page class
@@ -23,8 +24,11 @@ public class LoginTest extends Base {
 		Assert.assertTrue(isdashboardloaded);
 
 }
+	@Test(groups= {"regression"},retryAnalyzer=retry.Retry.class,description="")
 	public void verifyWhetherUserIsAbleToLoginUsingCorrectUsernameAndIncorrectPassword() throws Exception
-	{
+
+	
+{
 		
 		String username=ExcelUtility.readStringData(2, 0,"loginpage");
 		String password=ExcelUtility.readStringData(2, 1,"loginpage");
@@ -40,7 +44,7 @@ public class LoginTest extends Base {
 		
 		
 	}
-	@Test
+	@Test(groups= {"regression"},retryAnalyzer=retry.Retry.class,description="")
 	public void verifyWhetherUserIsAbleToLoginUsinginCorrectUsernameAndcorrectPassword() throws Exception
 	{
 		
@@ -54,7 +58,7 @@ public class LoginTest extends Base {
 		boolean alert=loginpage.redAlert();
 		Assert.assertTrue(alert);
 	}
-	@Test
+	@Test(groups= {"regression"},retryAnalyzer=retry.Retry.class,description="")
 	public void verifyWhetherUserIsAbleToLoginUsinginCorrectUsernameAndincorrectPassword() throws Exception
 	{
 		

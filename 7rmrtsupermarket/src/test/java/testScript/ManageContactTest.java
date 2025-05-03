@@ -9,7 +9,7 @@ import utility.ExcelUtility;
 import utility.FakerUtility;
 
 public class ManageContactTest extends Base {
-	@Test(description = "Verify the user is able to update contact")
+	@Test(groups={"regression"},description = "Verify the user is able to update contact")
 	public void verifyIfUserAbleToUpdateContactDetails() throws Exception
 	{
 		String username = ExcelUtility.readStringData(1, 0, "loginpage");
